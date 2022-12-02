@@ -9,3 +9,12 @@ Content-Type: application/json
   "name": "Kitty",
   "age": 2
 }
+
+###
+
+GET http://localhost:3000/dogs
+
+###
+
+POST  http://localhost:3000/dogs
+Content-Type: application/json

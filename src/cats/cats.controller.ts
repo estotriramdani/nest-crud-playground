@@ -18,15 +18,12 @@ export class CatsController {
 
   @Post()
   create(@Body() createCatDto: CreateCatDto) {
-    console.log(
-      '🚀 ~ file: cats.controller.ts:21 ~ CatsController ~ create ~ createCatDto',
-      createCatDto,
-    );
     return this.catsService.create(createCatDto);
   }
 
   @Get()
   findAll(@Query() query: any) {
+    console.log(process.env.DB_HOST);
     console.log(query);
     return this.catsService.findAll();
   }
